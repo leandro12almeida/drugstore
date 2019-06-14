@@ -1,38 +1,17 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Drugstore;
 use App\Product;
 
-class DatabaseSeeder extends Seeder
+class ProductsTableSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $drugstores = [
-            [
-                'description' => 'Drogaria Araújo',
-                'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s"),	 
-            ],
-            [
-                'description' => 'Drogaria Onofre',
-                'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s"),	 
-            ],
-            [
-                'description' => 'Drogaria Lucena',
-                'created_at' => date("Y-m-d H:i:s"),
-                'updated_at' => date("Y-m-d H:i:s"),	 
-            ]
-        ];    
-        
-        Drugstore::insert($drugstores);
-
         $products = [
             [
                 'description' => 'Amoxilina',
@@ -60,6 +39,6 @@ class DatabaseSeeder extends Seeder
             ]
         ];    
         
-        Product::insert($products);        
+        Product::insert($products);
     }
 }
